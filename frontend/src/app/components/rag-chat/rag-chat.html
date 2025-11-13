@@ -1,0 +1,21 @@
+<div class="chat-wrapper">
+  <div class="chat-card">
+    <h2>RAG (Retrieval-Augmented Generation) Example</h2>
+    <p class="chat-description">
+      Demonstrates how the chat retrieves information from an HR policies PDF using a simple in-memory RAG setup. RAG
+      combines document retrieval with AI-generated answers, allowing the chat to provide more accurate and relevant
+      responses based on real data.
+    </p>
+    <div class="messages">
+      <div *ngFor="let msg of messages" [ngClass]="msg.role === 'user' ? 'user-msg' : 'assistant-msg'">
+        {{ msg.content }}
+      </div>
+      <div *ngIf="loading" class="assistant-msg loading">Thinking...</div>
+    </div>
+
+    <div class="input-area">
+      <textarea [(ngModel)]="message" placeholder="Ask something..." rows="2"></textarea>
+      <button (click)="sendMessage()" [disabled]="loading || !message.trim()">Send</button>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,19 @@
+<div class="chat-wrapper">
+    <div class="chat-card">
+        <h2>Streaming Chat Response</h2>
+        <p class="chat-description">
+            Real-time streaming responses from the backend, emitting chunks of text as they arrive for a live chat experience.
+        </p>
+
+        <div class="messages">
+            <div *ngFor="let msg of messages" [ngClass]="msg.role === 'user' ? 'user-msg' : 'assistant-msg'">
+                {{ msg.content }}
+            </div>
+        </div>
+
+        <div class="input-area">
+            <textarea [(ngModel)]="message" placeholder="Ask something..." rows="2"></textarea>
+            <button (click)="sendMessage()" [disabled]="loading || !message.trim()">Send</button>
+        </div>
+    </div>
+</div>

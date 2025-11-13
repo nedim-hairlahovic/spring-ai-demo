@@ -1,0 +1,20 @@
+<div class="chat-wrapper">
+    <div class="chat-card">
+        <h2>Chat Memory</h2>
+        <p class="chat-description">
+            Chat remembers previous messages and maintains context across turns — using a simple in-memory store that keeps conversation history per chat session.
+        </p>
+
+        <div class="messages">
+            <div *ngFor="let msg of messages" [ngClass]="msg.role === 'user' ? 'user-msg' : 'assistant-msg'">
+                {{ msg.content }}
+            </div>
+            <div *ngIf="loading" class="assistant-msg loading">Thinking...</div>
+        </div>
+
+        <div class="input-area">
+            <textarea [(ngModel)]="message" placeholder="Ask something..." rows="2"></textarea>
+            <button (click)="sendMessage()" [disabled]="loading || !message.trim()">Send</button>
+        </div>
+    </div>
+</div>
