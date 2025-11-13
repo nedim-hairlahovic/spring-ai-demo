@@ -1,4 +1,4 @@
-package dev.nhairlahovic.springai;
+package dev.nhairlahovic.springai.repository;
 
 import dev.nhairlahovic.springai.entity.Ticket;
 import org.springframework.data.jpa.repository.JpaRepository;

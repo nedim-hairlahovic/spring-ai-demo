@@ -49,9 +49,6 @@ public class VectorStoreConfig {
 
     private File getVectorStoreFile() {
         var path = Paths.get("src/main/resources/data/" + vectorStoreName);
-        File file = path.toFile();
-//        file.getParentFile().mkdirs();
-
-        return file;
+        return path.toFile();
     }
 }

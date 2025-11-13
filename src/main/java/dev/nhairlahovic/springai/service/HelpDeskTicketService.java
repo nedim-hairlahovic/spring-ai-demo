@@ -1,6 +1,6 @@
 package dev.nhairlahovic.springai.service;
 
-import dev.nhairlahovic.springai.TicketRepository;
+import dev.nhairlahovic.springai.repository.TicketRepository;
 import dev.nhairlahovic.springai.entity.Ticket;
 import dev.nhairlahovic.springai.model.TicketRequest;
 import lombok.RequiredArgsConstructor;
