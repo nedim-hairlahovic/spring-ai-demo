@@ -173,3 +173,26 @@ Key Points:
 
 This example is implemented in the `ToolsChatService` and `HelpDeskTools` classes.
 
+## How to Run the Application
+
+**Prerequisites**
+
+- Java 21+
+- Maven 3.9+
+- Node.js (required to run the frontend)
+- OpenAI API key (as `OPENAI_API_KEY' env variable)
+
+**Running the Backend**
+
+```
+mvn spring-boot:run
+```
+
+**Running the Frontend**
+```
+cd frontend
+npm install
+npm start
+```
+
+Frontend will be available at [http://localhost:4200](http://localhost:4200). Backend runs at [http://localhost:8080](http://localhost:8080).
